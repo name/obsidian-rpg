@@ -1,11 +1,10 @@
 {
-	"id": "sample-plugin",
-	"name": "Sample Plugin",
+	"id": "obsidian-rpg",
+	"name": "Obsidian RPG",
 	"version": "1.0.0",
-	"minAppVersion": "0.15.0",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"minAppVersion": "0.9.12",
+	"description": "This plugin adds RPG elements to Obsidian.",
+	"author": "Charlie Maddex",
+	"authorUrl": "https://xn--1-kmb.com/",
 	"isDesktopOnly": false
 }
