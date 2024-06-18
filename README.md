@@ -12,7 +12,7 @@ I want to eventually replicate something like [vscode-pets](https://marketplace.
 
 ## Installation
 
-1. Open your Obsidian vault folder and navigate to `.obsidian/plugins`.
+1. Open your Obsidian vault folder in a terminal and navigate to `.obsidian/plugins`.
 2. Clone this repository into the plugins folder: `git clone git@github.com:name/obsidian-rpg.git`.
 3. Reload Obsidian and enable the plugin in the settings.
 4. The plugin will start tracking your time and experience points immediately.
