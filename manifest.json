@@ -1,10 +1,10 @@
 {
-	"id": "obsidian-rpg",
-	"name": "Obsidian RPG",
-	"version": "1.0.0",
+	"id": "rpg-stat-tracker",
+	"name": "RPG Stat Tracker",
+	"version": "1.0.2",
 	"minAppVersion": "0.9.12",
-	"description": "This plugin adds RPG elements to Obsidian.",
+	"description": "RPG-like stat tracker.",
 	"author": "Cunjur",
 	"authorUrl": "https://xn--1-kmb.com/",
-	"isDesktopOnly": false
+	"isDesktopOnly": true
 }
