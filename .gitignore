@@ -10,3 +10,5 @@ package-lock.json
 
 # obsidian data
 data.json
+
+main.js
