@@ -1,7 +1,6 @@
 import { App, Notice, Plugin, PluginSettingTab, Setting } from 'obsidian';
 
 interface RPGSettings {
-  lastLoad: number;
   level: number;
   xp: number;
   xpPerSecond: number;
@@ -11,7 +10,6 @@ interface RPGSettings {
 }
 
 const SETTINGS: RPGSettings = {
-  lastLoad: Date.now(),
   level: 1,
   xp: 0,
   xpPerSecond: 1,
@@ -29,7 +27,6 @@ export default class RPG extends Plugin {
 
   async onload() {
     await this.loadSettings();
-    this.settings.lastLoad = Date.now();
     this.settings.currentSessionDuration = 0;
     this.statsStatusBar = this.addStatusBarItem();
 
@@ -93,7 +90,6 @@ class RPGSettingsTab extends PluginSettingTab {
   display(): void {
     let { containerEl } = this;
     containerEl.empty();
-    containerEl.createEl('h3', { text: 'RPG settings' });
 
     new Setting(containerEl)
       .setName('XP gained per second')
@@ -115,19 +111,6 @@ class RPGSettingsTab extends PluginSettingTab {
           .setValue(this.plugin.settings.xpPerFile.toString())
           .onChange((value) => {
             this.plugin.settings.xpPerFile = parseInt(value);
-            this.plugin.saveSettings();
-          })
-      );
-
-      new Setting(containerEl)
-      .setName('Reset XP and level')
-      .setDesc('WARNING: Enabling or Disabling this option will reset your XP and level to 0.')
-      .addToggle((toggle) =>
-        toggle
-          .setValue(this.plugin.settings.displayStaringTimeAsHumanString)
-          .onChange((value) => {
-            this.plugin.settings.xp = 0;
-            this.plugin.settings.level = 1;
             this.plugin.saveSettings();
           })
       );
