@@ -1,6 +1,6 @@
 {
   "name": "obsidian-rpg",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "This plugin adds RPG elements to Obsidian.",
   "main": "main.js",
   "scripts": {
