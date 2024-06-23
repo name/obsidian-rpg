@@ -1,7 +1,7 @@
 {
 	"id": "rpg-stat-tracker",
 	"name": "RPG Stat Tracker",
-	"version": "1.0.2",
+	"version": "1.0.4",
 	"minAppVersion": "0.9.12",
 	"description": "RPG-like stat tracker.",
 	"author": "Cunjur",
