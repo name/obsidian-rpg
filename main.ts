@@ -66,7 +66,7 @@ export default class RPG extends Plugin {
   updateStats() {
     this.fileCount = this.app.vault.getFiles().length;
     const totalXP = this.settings.xp + (this.fileCount * this.settings.xpPerFile);
-    const currentLevel = Math.floor(totalXP / 600) + 1;
+    const currentLevel = Math.floor(Math.sqrt(Math.max(totalXP, 0) / 600)) + 1;
     if (currentLevel > this.settings.level) {
       this.settings.level = currentLevel;
       new Notice(`You leveled up to level ${currentLevel}!`);
